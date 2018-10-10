@@ -1,0 +1,62 @@
+@mixin cookie-compliance {
+  width: 100%;
+  z-index: 99999;
+  padding: rh() 0;
+  border: rem(1) solid $cookie-compliance-bc;
+  color: $cookie-compliance-fc;
+
+  .popup-text {
+    float: left;
+    margin: rh(1) 0;
+    text-align: center;
+
+    h2 {
+      @include headline--lvl2(false);
+      color: inherit;
+      margin-bottom: rh();
+    }
+
+    p {
+      @include paragraph(false);
+    }
+  }
+
+  .popup-buttons {
+    width: 100%;
+
+    button {
+      @include button--base;
+      display: block;
+      margin: 0 auto rh(1);
+    }
+  }
+
+  @include breakpoint(large) {
+    .column {
+      display: flex;
+      align-items: flex-end;
+    }
+
+    .popup-text {
+      text-align: left;
+      width: 70%;
+      float: left;
+      padding-right: rh();
+    }
+
+    .popup-buttons {
+      width: 30%;
+      height: 100%;
+      float: right;
+      position: relative;
+    }
+  }
+}
+// ---------
+// Implementation
+@if $generate-styleguide-classes {
+  #sliding-popup,
+  .cookie-compliance {
+    @include cookie-compliance;
+  }
+}

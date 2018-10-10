@@ -1,0 +1,53 @@
+.block-local-tasks-block {
+  position: fixed;
+  width: 100%;
+  z-index: ($menu-z-index - 2);
+
+  ul {
+    display: inline-flex;
+    margin: 0;
+    list-style: none;
+    border-left: 3px solid $blue-lochmara;
+    border-right: 3px solid $blue-lochmara;
+
+    a {
+      padding: rh(0.25) rh(0.5);
+    }
+
+  }
+
+  li {
+    font-size: calc-rem(14);
+    padding: 0;
+    margin: 0;
+
+    a {
+      background-color: $dark-gray;
+      color: $white;
+
+
+      &:hover,
+      &:focus {
+        background-color: $blue-lochmara;
+        color: $white;
+      }
+
+      &:active {
+        background-color: $white;
+        color: $blue-lochmara;
+      }
+    }
+  }
+
+  .tabs {
+    position: relative;
+    top: rh(1);
+    border: 0;
+    background: $transparent;
+  }
+
+  .is-active {
+    background-color: $blue-lochmara;
+    color: $white;
+  }
+}

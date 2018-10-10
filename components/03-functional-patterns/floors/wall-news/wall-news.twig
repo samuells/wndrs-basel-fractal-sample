@@ -1,0 +1,16 @@
+<div class="wall-news">
+  <div class="row--outer">
+    <div class="content-column">
+      <h2>{{wall.title}}</h2>
+      <ul class="wall-news--list">
+        {% for teaser in wall.teasers %}
+        <li>
+          {% include '@components/03-functional-patterns/bricks/' ~ wall.template ~ '/' ~ wall.template ~ '.twig' with {
+          'teaser' : teaser
+          } %}
+        </li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+</div>

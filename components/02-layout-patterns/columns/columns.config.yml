@@ -1,0 +1,17 @@
+title: Columns
+label: Columns
+order: 3
+status: 'wip'
+context:
+  column:
+    modifier: 'column'
+    style: 'background-color: aqua;'
+variants:
+  - name: Collapsed Column
+    context:
+      column:
+        modifier: 'column--collapsed'
+  - name: Text Column
+    context:
+      column:
+        modifier: 'column--text'

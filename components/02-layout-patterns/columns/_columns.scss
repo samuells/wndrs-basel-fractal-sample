@@ -1,0 +1,41 @@
+$column-gutter: rem-calc(20) !default;
+
+@mixin column($column: 12) {
+  width: percentage($column/12);
+  padding: 0 $column-gutter;
+  @include clearfix;
+}
+
+@mixin column--collapsed($column: 12) {
+  @include column($column);
+  padding: 0;
+}
+
+@mixin column--text {
+  @include column;
+  @include breakpoint(medium) {
+    width: percentage(10/12);
+    margin-left: auto;
+    margin-right: auto;
+  }
+  @include breakpoint(large) {
+    width: percentage(8.5/12);
+  }
+  @include breakpoint(xlarge) {
+    width: percentage(7/12);
+  }
+}
+
+@if $generate-styleguide-classes {
+  .column {
+    @include column;
+  }
+
+  .column--collapsed {
+    @include column--collapsed;
+  }
+
+  .column--text {
+    @include column--text;
+  }
+}

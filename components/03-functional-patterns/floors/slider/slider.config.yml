@@ -1,0 +1,14 @@
+title: 'Slider'
+label: 'Slider'
+order: 14
+status: 'wip'
+preview: '@preview'
+collated: false
+context:
+  slider:
+    modifier: 'slider'
+    items:
+      - '<div class="teaser"><div class="object-fit-container"><img src="http://placehold.it/1350x450" class="object-fit"></div></div>'
+      - '<div class="teaser"><div class="object-fit-container"><img src="http://placehold.it/1350x450" class="object-fit"></div></div>'
+      - '<div class="teaser"><div class="object-fit-container"><img src="http://placehold.it/1350x450" class="object-fit"></div></div>'
+      - '<div class="teaser"><div class="object-fit-container"><img src="http://placehold.it/1350x450" class="object-fit"></div></div>'

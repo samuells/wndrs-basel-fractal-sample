@@ -1,0 +1,21 @@
+@mixin floor--text {
+  margin-bottom: rh(0.5);
+
+  .content-column {
+    @include column--text();
+  }
+  @include breakpoint(large) {
+    margin-bottom: rh(0.75);
+  }
+  @include breakpoint(xlarge) {
+    margin-bottom: rh(1);
+  }
+}
+
+// ---------
+// Implementation
+@if $generate-styleguide-classes {
+  .floor--text {
+    @include floor--text;
+  }
+}

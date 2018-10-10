@@ -1,0 +1,11 @@
+// Render the team list items as if there was no wrapper element
+li.team-list--item {
+  @media all {
+    padding: 0;
+    margin: 0;
+  }
+
+  .node--type-employee-fact {
+    height: 100%;
+  }
+}

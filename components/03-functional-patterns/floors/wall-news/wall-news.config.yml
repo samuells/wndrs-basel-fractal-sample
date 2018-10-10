@@ -1,0 +1,35 @@
+title: 'News Wall'
+label: 'News Wall'
+order: 4
+status: 'wip'
+preview: '@preview'
+collated: false
+context:
+  wall:
+    template: 'teaser-news'
+    title: 'News'
+    teasers:
+      - view: 'full'
+        modifier: 'teaser--news--full'
+        headline: 'Headline'
+        author: 'Full Name'
+        date: 'July 13th, 2017'
+        teaserText: 'Web developers spend their days writing hypertext, but, byte for byte, most of the web is composed of images.'
+        cta:
+          label: 'Read more'
+      - view: 'full'
+        modifier: 'teaser--news--full'
+        headline: 'Headline'
+        author: 'Full Name'
+        date: 'July 13th, 2017'
+        teaserText: 'Web developers spend their days writing hypertext, but, byte for byte, most of the web is composed of images.'
+        cta:
+          label: 'Read more'
+      - view: 'full'
+        modifier: 'teaser--news--full'
+        headline: 'Headline'
+        author: 'Full Name'
+        date: 'July 13th, 2017'
+        teaserText: 'Web developers spend their days writing hypertext, but, byte for byte, most of the web is composed of images.'
+        cta:
+          label: 'Read more'

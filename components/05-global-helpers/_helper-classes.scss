@@ -1,0 +1,8 @@
+$generate-styleguide-classes: true !default;
+
+// Write helper classes inside
+@if $generate-styleguide-classes {
+  .visually-hidden {
+    @include element-invisible;
+  }
+}

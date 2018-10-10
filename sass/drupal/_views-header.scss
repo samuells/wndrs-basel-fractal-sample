@@ -1,0 +1,7 @@
+.block-views header {
+  margin-bottom: rhythm(2);
+
+  h2 {
+    @include lead;
+  }
+}

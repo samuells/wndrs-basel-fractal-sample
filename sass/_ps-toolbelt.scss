@@ -1,0 +1,49 @@
+// - - - - - - - - - - - - - - - - - - - - - - - - -
+// !!!! README FIRST !!!!
+// - - - - - - - - - - - - - - - - - - - - - - - - -
+//
+// This sass file contains all tools needed to style the project.
+// - functions
+// - mixins
+// - settings
+//
+// --IMPORTANT--
+// * do not change order
+//
+// - - - - - - - - - - - - - - - - - - - - - - - - -
+
+// 1.Global Styles Settings & Functions
+// ---------
+// - Project settings - these settings overrides default settings of Foundation and Ingrid
+
+// @import "project-styles/ps-settings";
+@import "ps-settings/ps-colors";
+@import "ps-settings/ps-global-variables";
+@import "ps-settings/ps-fonts";
+@import "ps-settings/ps-breakpoints";
+@import "ps-settings/ps-z-indexes";
+
+// 3.Ingrid
+// -------------------------------------
+// - Ingrid styling system build on Foundation from Zurb
+// - Vertical-Rhythm, Reponsive Typography
+// - Iconfont mixins
+@import "wb-utils/units";
+@import "wb-utils/breakpoints";
+@import "wb-utils/vertical-rhythm";
+@import "wb-utils/typography-reset";
+@import "wb-utils/wb-helpers";
+@import "wb-utils/wb-helpers--typography";
+
+// @import "generated/iconfont";
+
+// 4.Custom project mixins and styles
+// -------------------------------------
+// - usually style mixins used only in this project
+// - icons classes and variables
+@import "05-global-helpers/visibility";
+@import "05-global-helpers/clearfix";
+@import "05-global-helpers/hamburger";
+@import "05-global-helpers/shadows";
+@import "05-global-helpers/positioning";
+@import "05-global-helpers/transitions";

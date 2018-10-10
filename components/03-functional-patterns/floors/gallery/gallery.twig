@@ -1,0 +1,21 @@
+
+
+<div {{ attributes }} class="{{ gallery.modifier }}">
+  <div class="row--outer">
+    <div class="column">
+      <h2>{{ gallery.title }}</h2>
+      <div class="gallery-container" itemscope itemtype="http://schema.org/ImageGallery"  data-gallery-id="{{ gallery.id }}">
+        {% for item in gallery.thumbnails|slice(0, 5) %}
+          <div class="gallery-item object-fit-container">
+            {{item}}
+          </div>
+        {% endfor %}
+        {% if gallery.thumbnails | length > 5 %}
+          <a href="#" class="button js-open-gallery">{{ gallery.label }}</a>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</div>
+
+{% include '@components/03-functional-patterns/floors/gallery/gallery.ui.twig' %}

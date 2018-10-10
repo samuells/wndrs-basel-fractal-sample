@@ -1,0 +1,23 @@
+@mixin menu--tabs {
+  ul {
+    @include reset-ul(true);
+  }
+
+  li:not(:first-of-type)::before {
+    content: "|";
+    color: currentColor;
+  }
+
+  a {
+    @include link--in-paragraph;
+    margin: rh(0.5);
+  }
+}
+
+// ---------
+// Implementation
+@if $generate-styleguide-classes {
+  .menu--tabs {
+    @include menu--tabs;
+  }
+}

@@ -1,0 +1,20 @@
+title: 'Buttons'
+label: 'Buttons'
+order: 9
+status: 'wip'
+collated: false
+preview: '@preview'
+context:
+  button:
+    modifier: 'button'
+variants:
+  - name: 'Blue Button'
+    context:
+      button:
+        modifier: 'button--blue'
+  - name: 'Button in Pink Theme'
+    preview: '@preview-themed'
+    context:
+      theme: pink
+      button:
+        modifier: 'button'

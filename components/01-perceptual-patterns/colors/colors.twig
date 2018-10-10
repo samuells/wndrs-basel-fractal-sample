@@ -1,0 +1,25 @@
+<style>
+  .colorBox-{{color.name}} {
+    float: left;
+    width: 120px;
+    margin: 10px;
+  }
+  .colorBox-{{color.name}} div {
+    width: 100%;
+    height: 40px;
+    border: 1px solid black;
+    border-radius: 5px;
+    margin-bottom: 6px;
+    background-color: {{color.hex}};
+  }
+  .colorBox-{{color.name}} p {
+    font-size: 14px;
+    padding-bottom: 0;
+    margin-bottom: 2px;
+  }
+</style>
+<div class="colorBox-{{color.name}}">
+  <div></div>
+  <p>{{color.name}}</p>
+  <p>{{color.hex}}</p>
+</div>

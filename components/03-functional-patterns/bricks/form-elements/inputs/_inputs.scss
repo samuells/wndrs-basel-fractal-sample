@@ -1,0 +1,73 @@
+@mixin input {
+  @include paragraph(false);
+  width: 100%;
+  padding: rh(0.25);
+  border: 2px solid $input-bc;
+  border-radius: 0;
+  margin-bottom: rh(0.5);
+  color: $input-fc;
+  background-color: $input-bgc;
+  outline: none;
+
+  &::placeholder {
+    color: $input-placeholder-fc;
+  }
+
+  &:active,
+  &:focus {
+    border-color: $input-bc--active;
+  }
+}
+
+@mixin input--date {
+  @include input;
+}
+
+@mixin input--color {
+  border: 2px solid $input-bc;
+  @include fluid(( width: (35, 40), height: (35, 40)), (medium, xlarge));
+  margin-bottom: rh(0.5);
+  background-color: $input-bgc;
+  outline: none;
+}
+
+@mixin input--reset {
+  @include button--base;
+}
+
+@mixin input--submit {
+  @include button--base;
+  @include button--blue;
+}
+
+// ---------
+// Implementation
+@if $generate-styleguide-classes {
+  input[type=date],
+  input[type=datetime-local],
+  input[type=datetime],
+  input[type=email],
+  input[type=month],
+  input[type=number],
+  input[type=password],
+  input[type=search],
+  input[type=tel],
+  input[type=text],
+  input[type=time],
+  input[type=url],
+  input[type=week] {
+    @include input;
+  }
+
+  input[type="color"] {
+    @include input--color;
+  }
+
+  input[type="reset"] {
+    @include input--reset;
+  }
+
+  input[type="submit"] {
+    @include input--submit;
+  }
+}

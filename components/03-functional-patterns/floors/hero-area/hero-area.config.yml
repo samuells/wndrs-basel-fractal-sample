@@ -1,0 +1,13 @@
+title: 'News Hero Area'
+label: 'News Hero Area'
+status: 'wip'
+order: 10
+preview: '@preview'
+collated: false
+attributes: 'test'
+context:
+  area:
+    modifier: 'hero-area--news'
+    image: '<img src="https://placehold.it/1200x800" alt="alt">'
+    title: 'The professor will hit me!'
+    intro: "Tell her you just want to talk. It has nothing to do with mating. Ugh, it's filthy!"

@@ -1,0 +1,14 @@
+.views-auto-submit-full-form {
+  .form-item {
+    > label {
+      @include element-invisible();
+    }
+  }
+
+  select {
+    width: auto;
+    display: block;
+    margin: 0 auto;
+  }
+  margin-bottom: rh(2);
+}

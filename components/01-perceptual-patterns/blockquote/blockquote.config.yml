@@ -1,0 +1,10 @@
+title: 'Blockquote'
+label: 'Blockquote'
+order: 7
+preview: '@preview'
+status: 'wip'
+context:
+  quote:
+    modifier: ''
+    quote: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat laboriosam excepturi libero, eligendi doloremque, qui similique, ipsum culpa mollitia repellat sit esse sunt veritatis! Accusantium nostrum molestias, velit vel magni?'
+    author: 'Luke Skywalker'

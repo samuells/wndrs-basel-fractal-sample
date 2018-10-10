@@ -1,0 +1,22 @@
+@mixin image {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 0 auto;
+}
+
+@mixin image--full {
+  @include image;
+  width: 100%;
+}
+// ---------
+// Implementation
+@if $generate-styleguide-classes {
+  img {
+    @include image;
+
+    &.full-width {
+      @include image--full;
+    }
+  }
+}

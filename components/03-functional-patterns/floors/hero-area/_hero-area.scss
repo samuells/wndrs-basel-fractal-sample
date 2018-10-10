@@ -1,0 +1,43 @@
+@mixin hero-area--news {
+  margin-bottom: rh(1);
+
+  .hero-content {
+    @include column();
+    background-color: $hero-area-bgc--news;
+  }
+
+  img {
+    @include image--full;
+    max-width: rem(1600);
+    margin: 0 auto;
+  }
+  @include breakpoint(large) {
+    margin-bottom: rh(1.5);
+  }
+
+  @include breakpoint(xlarge) {
+    margin-bottom: rh(2);
+
+    .hero-content {
+      position: relative;
+      padding: rh(0.75) 0 rh(0.25);
+      margin-top: rh(-6);
+    }
+
+    h1,
+    p {
+      max-width: 90%;
+      margin-left: auto;
+      margin-right: auto; 
+      text-align: center;
+    }
+  }
+}
+
+// ---------
+// Implementation
+@if $generate-styleguide-classes {
+  .hero-area--news {
+    @include hero-area--news();
+  }
+}

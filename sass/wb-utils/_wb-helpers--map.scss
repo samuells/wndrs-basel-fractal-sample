@@ -1,0 +1,59 @@
+// ******************
+//   NOTE: LEGACY
+// ******************
+// will be deleted after new fluid/rwd font created
+
+// Typography helpers
+
+// @m generate-font-from-map($proporties-map)
+//
+// Generate font from proporties provided in map.
+//
+// * Use the rhythm function for the line-heigh, margin-top, margin-bottom
+// * If the values of are provided in px or without unit - it's transform to the rem
+//
+// **Dependency on the rhythm function**
+//
+// Compatibility untested
+//
+// Styleguide 1.12.1
+@mixin generate-font-from-map($proporties-map) {
+  @each $property in map-keys($proporties-map) {
+    @if $property == "font-size" {
+      font-size: rem-calc(map-get($proporties-map, font-size));
+    } @else if $property == "line-height" and map-get($proporties-map, $property) == calc {
+      line-height: rhythm(lines-for-font-size(map-get($proporties-map, font-size)));
+    } @else if index("line-height" "padding-top" "padding-bottom" "margin-top" "margin-bottom", $property) {
+      #{$property}: rhythm(map-get($proporties-map, $property));
+    } @else {
+      #{$property}: map-get($proporties-map, $property);
+    }
+  }
+}
+
+// @m create-rwd-font($styles-map)
+//
+// Generate the responsive web font using the function generate-font-from-map().
+//
+// <code>$style-map-name</code> - map of style for different media query ranges. In key "default" is define the default style for font.
+// It mus be defined at least this one key. Each first level key of this map is another map of keys, which represent proporties of css code.
+//
+// __Example__
+//
+// <code>@include create-rwd-font("font style name");</code>
+//
+// Compatibility untested
+//
+// Styleguide 1.12.2
+@mixin create-rwd-font($font-style-name) {
+  $styles-map: map-get($font-styles-map, #{$font-style-name});
+  @include generate-font-from-map(map-get($styles-map, default));
+  $breakpoints-map: map-remove($styles-map, default);
+  @each $breakpoint-key, $breakpoint-data in $breakpoints-map {
+    // TODO: breakpoint is no more used, because of the new version of breakpoint mixin in Foundation 6
+    $breakpoint: map-get($breakpoint-data, breakpoint);
+    @include breakpoint($breakpoint-key){
+      @include generate-font-from-map(map-remove($breakpoint-data, breakpoint));
+    }
+  }
+}

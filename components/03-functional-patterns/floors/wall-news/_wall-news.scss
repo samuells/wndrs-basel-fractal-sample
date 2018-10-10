@@ -1,0 +1,40 @@
+@mixin wall-news {
+  padding-bottom: rh(0.25);
+  margin-bottom: rh(0.5);
+  background-color: $wall-news-bgc;
+  background-clip: border-box;
+
+  .content-column {
+    @include column;
+  }
+
+  .wall-news--list {
+    @include grid--1to3;
+
+    > li {
+      margin-bottom: rh(0.5);
+      background-color: $wall-news-item-bgc;
+      background-clip: content-box;
+    }
+  }
+
+  @include breakpoint(medium) {
+    .wall-news--list {
+      margin: 0 rh(-0.25);
+
+      > li {
+        padding: 0 rh(0.25);
+      }
+    }
+  }
+  @include breakpoint(xlarge) {
+    padding-bottom: rh(1);
+    margin-bottom: rh(1);
+  }
+}
+
+@if $generate-styleguide-classes {
+  .wall-news {
+    @include wall-news;
+  }
+}

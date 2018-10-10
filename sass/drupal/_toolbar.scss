@@ -1,0 +1,35 @@
+$toolbarHeight: rem-calc(41);
+$logo-position: rem-calc(41);
+
+.toolbar {
+  z-index: ($menu-z-index - 1);
+}
+
+// Position of elements if logged in
+.toolbar-fixed {
+  .block-local-tasks-block,
+  .messages {
+    top: $toolbarHeight;
+  }
+
+  &.show-logo {
+    .brand-logo {
+      top: $logo-position + $toolbarHeight;
+    }
+  }
+
+  &.toolbar-horizontal {
+    &.toolbar-tray-open {
+      .block-local-tasks-block,
+      .messages {
+        top: (2 * $toolbarHeight);
+      }
+
+      &.show-logo {
+        .brand-logo {
+          top: $logo-position + (2 * $toolbarHeight);
+        }
+      }
+    }
+  }
+}

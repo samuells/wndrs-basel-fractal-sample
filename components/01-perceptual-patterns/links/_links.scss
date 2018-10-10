@@ -1,0 +1,50 @@
+@mixin link--stand-alone {
+  @include paragraph(false);
+  display: inline-block;
+  padding: rem(2 6);
+  font-family: $header-font-family;
+  font-weight: 900;
+  text-decoration: none;
+  color: $link-fc;
+  box-shadow: inset 0 calc-rem(-3) 0 0;
+  @include transition(color);
+
+  &:focus,
+  &:hover {
+    color: $link-fc--hover;
+  }
+
+  &:active {
+    color: $link-fc--active;
+  }
+}
+
+@mixin link--in-paragraph {
+  display: inline-block;
+  font-family: inherit;
+  font-weight: 600;
+  text-decoration: none;
+  color: $link-fc;
+  box-shadow: inset 0 calc-rem(-1px) 0 0;
+  @include transition(color, box-shadow);
+
+  @include link-states {
+    color: $link-paragraph-fc--hover;
+    box-shadow: inset 0 calc-rem(-24px) 0 0 rgba($link-paragraph-underline, 0.5);
+  }
+
+  &:active {
+    color: $link-paragraph-fc--active;
+  }
+}
+// ---------
+// Implementation
+@if $generate-styleguide-classes {
+  a.stand-alone {
+    @include link--stand-alone;
+  }
+
+  p a {
+    @include link--in-paragraph;
+  }
+}

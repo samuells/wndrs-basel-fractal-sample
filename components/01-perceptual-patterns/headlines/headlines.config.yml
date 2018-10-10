@@ -1,0 +1,42 @@
+title: 'Headlines'
+label: 'Headlines'
+order: 2
+status: 'wip'
+preview: '@preview'
+collated: true
+context:
+  headline:
+    tag: 'h1'
+    modifier: ''
+    content: 'Headline lvl1'
+variants:
+  - name: 'Headline lvl2'
+    context:
+      headline:
+        tag: 'h2'
+        modifier: ''
+        content: 'Headline lvl2'
+  - name: 'Headline lvl3'
+    context:
+      headline:
+        tag: 'h3'
+        modifier: ''
+        content: 'Headline lvl3'
+  - name: 'Headline lvl4'
+    context:
+      headline:
+        tag: 'h4'
+        modifier: ''
+        content: 'Headline lvl4'
+  - name: 'Headline lvl5'
+    context:
+      headline:
+        tag: 'h5'
+        modifier: ''
+        content: 'Headline lvl5'
+  - name: 'Hero Area Headline'
+    context:
+      headline:
+        tag: 'h1'
+        modifier: 'headline--hero'
+        content: 'H1 as hero area headline'

@@ -1,0 +1,8 @@
+title: 'Figure'
+label: 'Figure'
+order: 8
+preview: '@preview'
+status: 'wip'
+context:
+  figure:
+    modifier: ''

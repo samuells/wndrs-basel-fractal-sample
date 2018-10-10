@@ -1,0 +1,14 @@
+<div class="{{teaser.modifier}}">
+  {% if teaser.view == 'simple' %}
+    <a href="{{teaser.cta.url}}">
+      <p class="teaser-author">{{teaser.author}}</p>
+      <h2>{{teaser.headline}}</h2>
+    </a>
+  {% elseif teaser.view == 'full' %}
+    <span class="teaser-date">{{teaser.date}}</span>
+    <h2>{{teaser.headline}}</h2>
+    <p class="teaser-author">{{teaser.author}}</p>
+    <p class="teaser-text">{{teaser.teaserText}}</p>
+    <a class="button" href="{{teaser.url}}">{{teaser.cta.label}}</a>
+  {% endif %}
+</div>

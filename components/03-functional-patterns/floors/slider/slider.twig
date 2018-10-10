@@ -1,0 +1,11 @@
+<div class="{{ slider.modifier }}">
+  <div class="row--outer">
+    <div class="column">
+      <ul class="owl-carousel owl-theme">
+        {% for item in slider.items %}
+        <li>{{ item }}</li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+</div>

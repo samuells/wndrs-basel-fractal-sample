@@ -1,0 +1,36 @@
+@mixin floor--text-w-img {
+  @include row--outer;
+  margin-bottom: rh(0.5);
+
+  img {
+    @include image--full;
+  }
+
+  .image-column,
+  .content-column {
+    @include column--text();
+  }
+
+  @include breakpoint(xlarge) {
+    display: flex;
+    align-items: center;
+    margin-bottom: rh(1);
+
+    .image-column,
+    .content-column {
+      flex-basis: 50%;
+    }
+
+    &.image-left {
+      .content-column {
+        order: 2;
+      }
+    }
+  }
+}
+
+@if $generate-styleguide-classes {
+  .floor--text-w-img {
+    @include floor--text-w-img;
+  }
+}

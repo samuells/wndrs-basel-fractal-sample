@@ -1,0 +1,9 @@
+title: Top Bar
+label: Top Bar
+order: 1
+status: 'wip'
+preview: '@preview'
+collated: false
+context:
+  topbar:
+    modifier: 'topbar'

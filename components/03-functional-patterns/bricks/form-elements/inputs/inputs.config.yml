@@ -1,0 +1,46 @@
+title: 'Inputs'
+label: 'Inputs'
+order: 1
+preview: '@preview'
+status: 'wip'
+collated: true
+context:
+  input:
+    type: 'text'
+    placeholder: 'This is a placeholder'
+    value: 'This is a value'
+    modifier: ''
+variants:
+  - name: 'number'
+    context:
+      input:
+        value: 1
+        type: 'number'
+  - name: 'search'
+    context:
+      input:
+        type: 'search'
+  - name: 'date'
+    context:
+      input:
+        type: 'date'
+  - name: 'datetime-local'
+    context:
+      input:
+        type: 'datetime-local'
+  - name: 'email'
+    context:
+      input:
+        type: 'email'
+  - name: 'reset'
+    context:
+      input:
+        value: 'Reset'
+        placeholder: ''
+        type: 'reset'
+  - name: 'submit'
+    context:
+      input:
+        value: 'Submit'
+        placeholder: ''
+        type: 'submit'

@@ -1,0 +1,18 @@
+title: 'Image Floor'
+label: 'Image'
+status: 'wip'
+order: 2
+preview: '@preview'
+collated: false
+context:
+  floor:
+    modifier: 'floor--image'
+    style: ''
+    image: '<img src="https://placehold.it/350x150" alt="alt">'
+variants:
+  - name: 'Image Floor out of Box'
+    title: 'Image Floor out of Box'
+    label: 'Image out of Box'
+    context:
+      floor:
+        modifier: 'floor--image out-of-box'

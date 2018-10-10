@@ -1,0 +1,73 @@
+title: 'Gallery'
+label: 'Gallery'
+order: 6
+preview: '@preview'
+status: 'wip'
+collated: false
+context:
+  gallery:
+    id: 1
+    title: '1 Image'
+    modifier: 'gallery--photo items--1'
+    thumbnails:
+      - '<img src="http://lorempixel.com/400/200/sports/1/" alt="Gallery Item" class="object-fit"/>'
+variants:
+  - name: '2 Images'
+    context:
+      gallery:
+        id: 2
+        title: '2 Images'
+        modifier: 'gallery--photo items--2'
+        thumbnails:
+          - '<img src="http://lorempixel.com/400/200/sports/1/" alt="Gallery Item" class="object-fit"/>'
+  - name: '3 Images'
+    context:
+      gallery:
+        id: 3
+        title: '3 Images'
+        modifier: 'gallery--photo items--3'
+        thumbnails:
+          - '<img src="http://lorempixel.com/400/200/sports/1/" alt="Gallery Item" class="object-fit"/>'
+          - '<img src="http://lorempixel.com/400/200/sports/2/" alt="Gallery Item" class="object-fit"/>'
+          - '<img src="http://lorempixel.com/400/200/sports/3/" alt="Gallery Item" class="object-fit"/>'
+  - name: '4 Images'
+    context:
+      gallery:
+        id: 4
+        title: '4 Images'
+        modifier: 'gallery--photo items--4'
+        thumbnails:
+          - '<img src="http://lorempixel.com/400/200/sports/1/" alt="Gallery Item" class="object-fit"/>'
+          - '<img src="http://lorempixel.com/400/200/sports/2/" alt="Gallery Item" class="object-fit"/>'
+          - '<img src="http://lorempixel.com/400/200/sports/3/" alt="Gallery Item" class="object-fit"/>'
+          - '<img src="http://lorempixel.com/400/200/sports/5/" alt="Gallery Item" class="object-fit"/>'
+  - name: '5 Images'
+    context:
+      gallery:
+        id: 5
+        title: '5 Images'
+        modifier: 'gallery--photo items--5'
+        thumbnails:
+          - '<img src="http://lorempixel.com/400/200/sports/1/" alt="Gallery Item" class="object-fit"/>'
+          - '<img src="http://lorempixel.com/400/200/sports/2/" alt="Gallery Item" class="object-fit"/>'
+          - '<img src="http://lorempixel.com/400/200/sports/3/" alt="Gallery Item" class="object-fit"/>'
+          - '<img src="http://lorempixel.com/400/200/sports/5/" alt="Gallery Item" class="object-fit"/>'
+          - '<img src="http://lorempixel.com/400/200/sports/1/" alt="Gallery Item" class="object-fit"/>'
+  - name: 'n Images'
+    context:
+      gallery:
+        id: 10
+        title: 'n Images'
+        modifier: 'gallery--photo items--5'
+        label: 'open gallery'
+        thumbnails:
+          - '<img src="http://lorempixel.com/400/200/sports/1/" alt="Gallery Item" class="object-fit"/>'
+          - '<img src="http://lorempixel.com/400/200/sports/2/" alt="Gallery Item" class="object-fit"/>'
+          - '<img src="http://lorempixel.com/400/200/sports/3/" alt="Gallery Item" class="object-fit"/>'
+          - '<img src="http://lorempixel.com/400/200/sports/5/" alt="Gallery Item" class="object-fit"/>'
+          - '<img src="http://lorempixel.com/400/200/nature/1/" alt="Gallery Item" class="object-fit"/>'
+          - '<img src="http://lorempixel.com/400/200/nature/2/" alt="Gallery Item" class="object-fit"/>'
+          - '<img src="http://lorempixel.com/400/200/nature/3/" alt="Gallery Item" class="object-fit"/>'
+          - '<img src="http://lorempixel.com/400/200/nature/5/" alt="Gallery Item" class="object-fit"/>'
+          - '<img src="http://lorempixel.com/400/200/sports/1/" alt="Gallery Item" class="object-fit"/>'
+          - '<img src="http://lorempixel.com/400/200/sports/1/" alt="Gallery Item" class="object-fit"/>'

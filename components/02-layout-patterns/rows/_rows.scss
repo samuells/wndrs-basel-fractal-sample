@@ -1,0 +1,34 @@
+$fluid-breakpoint: "xlarge" !default;
+$maxed-breakpoint: "xxlarge" !default;
+$maxed-row-width: rem-calc(1200) !default;
+
+@mixin row {
+  max-width: $maxed-row-width;
+  padding: 0;
+  margin-left: 0;
+  margin-right: 0;
+  @include clearfix;
+}
+
+@mixin row--outer {
+  @include row;
+  margin-left: auto;
+  margin-right: auto;
+  @include breakpoint($fluid-breakpoint) {
+    max-width: percentage($maxed-row-width / $maxed-breakpoint);
+  }
+  @include breakpoint($maxed-breakpoint) {
+    max-width: calc-rem($maxed-row-width);
+  }
+}
+// ---------
+// Implementation
+@if $generate-styleguide-classes {
+  .row--outer {
+    @include row--outer;
+  }
+
+  .row {
+    @include row;
+  }
+}

@@ -1,0 +1,10 @@
+title: 'Basic Text Floor'
+label: 'Basic Text'
+order: 1
+status: 'wip'
+preview: '@preview'
+collated: true
+context:
+  floor:
+    modifier: 'floor--text row--outer'
+    content: '<p>With Drupal 8, a CMS was implemented that is powerful, flexible and easy to handle. This was crucial as a long-term solution considering the a few thousand frontend users that would participate and communicate on this platform.</p>'

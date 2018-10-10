@@ -1,0 +1,10 @@
+title: 'Stripe'
+label: 'Stripe'
+order: 1
+status: 'wip'
+preview: '@preview'
+collated: true
+context:
+  stripe:
+    content: '<p>From strategic consultancy, creation to the excellent realization: As a full service provider we can offer a broad portfolio of digital services to our customers.</p>'
+    padding: ''

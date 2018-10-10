@@ -1,0 +1,31 @@
+@mixin textarea {
+  @include paragraph(false);
+  width: 100%;
+  color: $textarea-fc;
+  border: {
+    style: solid;
+    width: calc-rem(1);
+    color: $textarea-bc;
+  }
+  padding: rh(0.5);
+  margin-bottom: rh();
+  outline: none;
+  overflow: auto;
+
+  &::placeholder {
+    color: $textarea-placeholder-fc;
+  }
+
+  &:active,
+  &:focus {
+    border-color: $textarea-bc--active;
+  }
+}
+
+// ---------
+// Implementation
+@if $generate-styleguide-classes {
+  textarea {
+    @include textarea;
+  }
+}

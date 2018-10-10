@@ -1,0 +1,205 @@
+// Import default mmenu styling
+@import "./topnav.mmenu";
+
+// Topbar variables
+$topbar-menu-height: 50px !default;
+$topbar-menu-link-height: 40px !default;
+$topbar-menu-link-fh: 20px !default;
+
+@mixin topbar {
+  padding: rh(0.5) 0;
+  background-color: $topbar-bgc;
+
+  .layout-container {
+    @include row--outer;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .region-header {
+    display: none;
+  }
+
+  .region-header-actions {
+    display: flex;
+    flex-basis: 50%;
+    flex-grow: 1;
+    align-content: center;
+    justify-content: flex-end;
+  }
+  @include breakpoint(xlarge) {
+    .region-header {
+      display: flex;
+      flex-grow: 1;
+    }
+
+    .region-header-actions {
+      display: none;
+    }
+  }
+}
+// ---------
+@mixin mm--burger {
+  display: block;
+  padding: rem(10) $column-gutter;
+
+  span {
+    @include hamburger();
+  }
+}
+// ---------
+@mixin logo--topbar {
+  display: block;
+  max-width: 50vw;
+  padding: 0 $column-gutter;
+
+  img {
+    height: rem($topbar-menu-link-height);
+  }
+  @include breakpoint(xlarge) {
+    img {
+      height: rem($topbar-menu-height);
+    }
+  }
+}
+// ---------
+@mixin menu--primary {
+  flex-grow: 1;
+  padding: 0 $column-gutter;
+
+  // default styling
+  a {
+    @include link--in-paragraph;
+  }
+
+  // top level menu overrides
+  .content > .menu {
+    @include reset-ul(true);
+
+    > li {
+      $tmp-li-vertical-padding: ($topbar-menu-height - $topbar-menu-link-height) / 2;
+      padding: rem($tmp-li-vertical-padding 6);
+
+      > a {
+        $tmp-link-vertical-padding: ($topbar-menu-link-height - $topbar-menu-link-fh) / 2;
+        padding: rem($tmp-link-vertical-padding 6);
+        font-size: rem($topbar-menu-link-fh);
+        line-height: 1;
+      }
+
+      &.menu-item--expanded {
+        > a::after {
+          content: "▼";
+          padding-left: rem(6);
+        }
+      }
+    }
+  }
+  // sub level menu overrides
+  .menu .menu {
+    @include reset-ul(false);
+    position: absolute;
+    top: 100%;
+    left: 0;
+    padding: rem(10);
+    background-color: $submenu-bgc;
+    opacity: 0;
+    z-index: -1;
+    box-shadow: rem(0 0 5 0) $submenu-sc;
+    @include transition(opacity, z-index);
+    transition-timing-function: ease-out, step-end;
+
+    li {
+      min-width: rem(300);
+      padding: rem(8 0);
+
+      &.menu-item--expanded {
+        > a::after {
+          content: "▶";
+          padding-left: rem(12);
+        }
+      }
+    }
+
+    .menu {
+      top: 0;
+      left: 80%;
+    }
+  }
+  // open sub menu
+  li.menu-item--expanded {
+    position: relative;
+
+    &:hover {
+      > .menu {
+        opacity: 1;
+        z-index: 1;
+        transition-timing-function: ease-out, step-start;
+      }
+    }
+  }
+}
+// ---------
+@mixin menu--language-switcher {
+  padding: 0 $column-gutter;
+  $tmp-link-h: 30px;
+  $tmp-link-fz: 14px;
+
+  a {
+    @include link--in-paragraph;
+    display: block;
+    $tmp-link-vertical-padding: ($tmp-link-h - $tmp-link-fz) / 2;
+    padding: rem($tmp-link-vertical-padding 2);
+    font-size: rem($tmp-link-fz) !important;
+    line-height: 1;
+  }
+
+  .content > .menu {
+    @include reset-ul(true);
+  }
+
+  li {
+    $tmp-li-vertical-padding: ($topbar-menu-height - $tmp-link-h) / 2;
+    padding: rem($tmp-li-vertical-padding 2);
+
+    &.is-active {
+      a {
+        color: $langswitcher-fs--active;
+        box-shadow: inset 0 rem(-24) 0 0 $langswitcher-bs--active;
+      }
+    }
+  }
+}
+// ---------
+@mixin menu--mobile {
+  a {
+    @include paragraph;
+  }
+}
+// ---------
+// Implementation
+@if $generate-styleguide-classes {
+  .mobile-menu {
+    @include menu--mobile;
+  }
+
+  header.topbar {
+    @include topbar;
+
+    .logo {
+      @include logo--topbar;
+    }
+
+    .nav-burger {
+      @include mm--burger;
+    }
+
+    .menu--primary {
+      @include menu--primary;
+    }
+
+    .menu--language-switcher {
+      @include menu--language-switcher;
+    }
+  }
+}

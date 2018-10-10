@@ -1,0 +1,37 @@
+@mixin blockquote {
+  position: relative;
+  width: 90%;
+  max-width: calc-rem(460);
+  padding: rh(1.5) 0;
+  margin: rh(1) auto;
+
+  p {
+    position: relative;
+
+    &.quote {
+      font-family: $body-font-family;
+      font-weight: 300;
+      @include fluid(( font-size: (20 32)), (medium, large));
+      line-height: 1.4;
+      font-style: italic;
+    }
+
+    &.quote-author {
+      @include fluid(( font-size: (14 17)), (medium, large));
+    }
+  }
+
+  @include breakpoint(medium) {
+    padding: rh(2) 0 rh(1.5);
+    margin: rh(1.5) auto;
+  }
+  @include breakpoint(large) {
+    padding: rh(3) 0 rh(2.5);
+    margin: rh(2) auto;
+  }
+}
+@if $generate-styleguide-classes {
+  blockquote {
+    @include blockquote;
+  }
+}

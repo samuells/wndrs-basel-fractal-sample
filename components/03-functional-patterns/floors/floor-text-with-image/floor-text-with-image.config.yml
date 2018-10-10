@@ -1,0 +1,19 @@
+title: 'Text with Image Floor -- Right'
+label: 'Text with Image'
+order: 3
+status: 'wip'
+preview: '@preview'
+collated: false
+context:
+  floor:
+    modifier: 'floor--text-w-img'
+    image: '<img src="https://placehold.it/350x150" alt="alt">'
+    text:
+      content: '<h4><strong>Drupal 8</strong> CMS</h4><p>With Drupal 8, a CMS was implemented that is powerful, flexible and easy to handle. This was crucial as a long-term solution considering the a few thousand frontend users that would participate and communicate on this platform.</p>'
+variants:
+  - name: 'Image on Left'
+    title: 'Text with Image Floor -- Left'
+    label: 'Image on Left Side'
+    context:
+      floor:
+        modifier: 'floor--text-w-img image-left'

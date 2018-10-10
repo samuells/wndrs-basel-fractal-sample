@@ -1,0 +1,10 @@
+title: 'Cookie Compliance'
+label: 'Cookie Compliance'
+status: 'wip'
+order: 20
+preview: '@preview'
+collated: false
+context:
+    agree_button: 'Yes, I agree'
+    disagree_button: 'No, give me more info'
+    message: '<h2>Usage of Cookies</h2><p>We use cookies on this website to enhance your online experiance. By continuing to browse our website you agree to our Cookie Policy</p>'

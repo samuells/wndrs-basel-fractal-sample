@@ -1,0 +1,9 @@
+title: Breadcrumb Floor
+label: Breadcrumb
+order: 50
+status: 'wip'
+preview: '@preview'
+context:
+  breadcrumb:
+    modifier: 'nav--breadcrumb'
+    content: ''

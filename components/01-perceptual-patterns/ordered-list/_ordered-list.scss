@@ -1,0 +1,43 @@
+@mixin list-style--ordered {
+  @include paragraph(false);
+  padding-left: calc-rem(30);
+  margin: rh(0.5) 0;
+
+  li {
+    padding-left: calc-rem(8);
+    margin: 0 0 rh(0.25);
+
+    > ol {
+      padding-left: calc-rem(10);
+      padding-bottom: 0;
+      margin: rh(0.25) 0 0;
+
+      li:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+  @include breakpoint(medium) {
+    padding-left: calc-rem(50);
+    margin: rh(1) 0;
+
+    li {
+      margin-bottom: rh(0.5);
+
+      > ol {
+        padding-left: calc-rem(10);
+      }
+    }
+  }
+  @include breakpoint(xlarge) {
+    padding-left: calc-rem(60);
+    margin: rh(1.5) 0;
+  }
+}
+// ---------
+// Implementation
+@if $generate-styleguide-classes {
+  ol {
+    @include list-style--ordered;
+  }
+}

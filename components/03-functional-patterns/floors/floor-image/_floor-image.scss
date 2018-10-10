@@ -1,0 +1,27 @@
+@mixin floor--image {
+  @include column--text();
+  margin-bottom: rh(0.5);
+
+  img {
+    @include image--full;
+  }
+
+  @include breakpoint(xlarge) {
+    margin-bottom: rh(1);
+
+    &.out-of-box {
+      .img-wrapper {
+        margin-left: rem(-50px);
+        margin-right: rem(-50px);
+      }
+    }
+  }
+}
+
+// ---------
+// Implementation
+@if $generate-styleguide-classes {
+  .floor--image {
+    @include floor--image();
+  }
+}

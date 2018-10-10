@@ -1,0 +1,12 @@
+title: 'Gallery Item'
+label: 'Gallery Item'
+order: 30
+status: 'wip'
+preview: '@preview'
+collated: false
+context:
+  item:
+    thumbnail: 'https://placehold.it/350x150'
+    image: 'https://placehold.it/1350x1050'
+    caption: 'thumbnail caption 1'
+    alt: 'thumbnail description'

@@ -1,0 +1,11 @@
+title: Grid 1 to 3
+label: Grid 1 to 3
+order: 4
+status: 'wip'
+context:
+  grid:
+    modifier: 'grid--1to3'
+    items:
+      - style: 'height: 50px; background-color: blue;'
+      - style: 'height: 50px; background-color: aqua;'
+      - style: 'height: 50px; background-color: lightblue;'

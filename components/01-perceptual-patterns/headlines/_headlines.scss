@@ -1,0 +1,76 @@
+@mixin headline {
+  display: block;
+  font-family: $header-font-family;
+  font-weight: 700;
+  line-height: 1.25;
+  color: $headline-c;
+}
+@mixin headline--lvl1($box-model: true) {
+  @include headline;
+  @if $box-model {
+    padding: rh(0.25) 0;
+    margin: rh(0.5) 0;
+  }
+  @include fluid(( font-size: (40, 72)), (medium, xlarge));
+}
+@mixin headline--lvl2($box-model: true) {
+  @include headline;
+  @if $box-model {
+    padding: rh(0.25) 0;
+    margin: rh(0.25) 0;
+  }
+  @include fluid(( font-size: (30, 60)), (medium, xlarge));
+}
+@mixin headline--lvl3($box-model: true) {
+  @include headline;
+  @if $box-model {
+    padding: 0 0 rh(0.125);
+    margin: 0 0 rh(0.125);
+  }
+  @include fluid(( font-size: (24, 45)), (medium, xlarge));
+}
+@mixin headline--lvl4($box-model: true) {
+  @include headline;
+  @if $box-model {
+    padding: 0 0 rh(0.125);
+    margin: 0 0 rh(0.125);
+  }
+  @include fluid(( font-size: (18, 24)), (medium, xlarge));
+}
+@mixin headline--lvl5($box-model: true) {
+  @include headline;
+  @if $box-model {
+    padding: 0 0 rh(0.125);
+    margin: 0;
+  }
+  @include fluid(( font-size: (16, 20)), (medium, xlarge));
+}
+
+// ---------
+// Implementation
+@if $generate-styleguide-classes {
+  .is-h1,
+  h1 {
+    @include headline--lvl1;
+  }
+
+  .is-h2,
+  h2 {
+    @include headline--lvl2;
+  }
+
+  .is-h3,
+  h3 {
+    @include headline--lvl3;
+  }
+
+  .is-h4,
+  h4 {
+    @include headline--lvl4;
+  }
+
+  .is-h5,
+  h5 {
+    @include headline--lvl5;
+  }
+}

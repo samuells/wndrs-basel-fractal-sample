@@ -1,0 +1,36 @@
+@mixin footer {
+
+  width: 100%;
+  padding: rh(1.5) 0 rh(1);
+  border-top: calc-rem(1) solid $footer-bc;
+  color: $footer-fc;
+  background-color: $footer-bgc;
+  @include clearfix;
+
+  .column--copyright,
+  .column--footer-menu {
+    @include column;
+    float: left;
+  }
+
+  @include breakpoint(large) {
+    .column--copyright {
+      width: percentage(6/12);
+    }
+
+    .column--footer-menu {
+      width: percentage(6/12);
+      nav {
+        float: right;
+      }
+    }
+  }
+}
+
+// ---------
+// Implementation
+@if $generate-styleguide-classes {
+  footer.footer {
+    @include footer;
+  }
+}

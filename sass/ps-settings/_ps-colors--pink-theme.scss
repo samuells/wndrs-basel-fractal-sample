@@ -1,0 +1,122 @@
+// Default Color Pallette
+@import "ps-colors";
+
+// =======================
+// Colors Variables
+//
+// Naming convention - base color + the name of the color base
+// on the project http://chir.ag/projects/name-that-color/
+// =======================
+
+
+// Pink Variation Palette
+$pink-ice: #efd3e7;
+$pink-can: #d693bd;
+$pink-eggplant: #9c0063;
+
+
+// =======================
+// Colors Constants
+//
+// In this section are defined color constants for various elements of web.
+// **To define color use only variables from above section**
+// =======================
+
+// Base Colors
+$primary-font-color: $pink-eggplant;
+
+// Headline Colors
+$headline-c: $primary-font-color;
+
+// Buttons Colors
+$button-fc: $pink-eggplant;
+$button-bc: $pink-can;
+$button-bgc: $transparent;
+$button-fc--hover: $white;
+$button-bgc--hover: $pink-can;
+$button-bc--active: $pink-eggplant;
+$button-blue-fc: $blue-twitter;
+$button-blue-bc: $blue-twitter;
+$button-blue-fc--hover: $white;
+$button-blue-bgc--hover: $blue-twitter;
+$button-blue-bc--active: $blue-facebook;
+
+// Anchor Links Colors
+$link-fc: $blue-facebook;
+$link-fc--hover: $blue-twitter;
+$link-fc--active: $blue-linkedin;
+$link-underline: $link-fc;
+$link-paragraph-fc: $link-fc;
+$link-paragraph-fc--hover: $link-fc--hover;
+$link-paragraph-fc--active: $white;
+$link-paragraph-underline: $link-fc--hover;
+
+// Top Navigation Colors
+$topbar-bgc: $pink-ice;
+$submenu-bgc: $pink-ice;
+$submenu-sc: $gray-dust;
+$langswitcher-fs--active: $white;
+$langswitcher-bs--active: $pink-can;
+$burger-ic: $gray-dove;
+$burger-ic--hover: $black;
+
+// Teaser Colors
+$news-teaser-fc: $primary-font-color;
+$news-teaser-bc: $gray-mercury;
+$news-teaser-bgc: $transparent;
+$news-teaser-bgc--hover: $gray-mercury;
+$news-teaser-bgc--active: $gray-dust;
+
+// Table Colors
+$table-fc: $primary-font-color;
+$table-bgc: $pink-ice;
+$table-bc: $pink-can;
+$table-bgc: $pink-ice;
+$table-header-fc: $table-bgc;
+$table-header-bgc: $table-fc;
+
+//Input Colors
+$input-fc: $primary-font-color;
+$input-bc: $primary-font-color;
+$input-bc--active: $blue-twitter;
+$input-bgc: $white;
+$input-placeholder-fc: $pink-can;
+
+//Select Boxes Colors
+$select-boxes-fc: $primary-font-color;
+$select-boxes-bc: $pink-can;
+$select-boxes-bc--active: $blue-twitter;
+$select-boxes-bgc: $white;
+$select-boxes-option-fc: $primary-font-color;
+$select-boxes-option-bgc: $white;
+$select-boxes-option-fc--hover: $white;
+$select-boxes-option-bgc--hover: $blue-twitter;
+
+//Textarea Color
+$textarea-fc: $primary-font-color;
+$textarea-bc: $pink-can;
+$textarea-bc--active: $blue-twitter;
+$textarea-bgc: $white;
+$textarea-placeholder-fc: $pink-can;
+
+//Radio button
+$radio-bc: $pink-can;
+$radio-dot-bgc: $white;
+$radio-bc--checked: $blue-twitter;
+$radio-bgc--checked: $blue-twitter;
+
+//Checkbox button
+$checkbox-bc: $radio-bc;
+$checkbox-dot-bgc: $radio-dot-bgc;
+$checkbox-bc--checked: $radio-bc--checked;
+$checkbox-bgc--checked: $radio-bgc--checked;
+$checkbox-fc--checked: $white;
+
+//Footer
+$footer-fc: $primary-font-color;
+$footer-bgc: $gray-alto;
+$footer-bc: $gray-alto;
+
+// Walls
+$wall-news-bgc: $pink-ice;
+$wall-news-item-bgc: $white;

@@ -1,0 +1,81 @@
+title: 'Project Colors'
+label: 'Colors'
+order: 0
+status: 'wip'
+preview: '@preview'
+collated: true
+context:
+  color:
+    name: 'transparent'
+    hex: 'rgba(255,2,255,0)'
+variants:
+  - name: 'white'
+    context:
+      color:
+        name: 'white'
+        hex: '#FFFFFF'
+  - name: 'wild-sand'
+    context:
+      color:
+        name: 'wild-sand'
+        hex: '#f6f6f6'
+  - name: 'gray-sand'
+    context:
+      color:
+        name: 'gray-sand'
+        hex: '#F5F5F5'
+  - name: 'gray-mercury'
+    context:
+      color:
+        name: 'gray-mercury'
+        hex: '#E6E6E6'
+  - name: 'gray-alto'
+    context:
+      color:
+        name: 'gray-alto'
+        hex: '#D5D5D5'
+  - name: 'gray-silver'
+    context:
+      color:
+        name: 'gray-silver'
+        hex: '#C6C6C6'
+  - name: 'gray-dust'
+    context:
+      color:
+        name: 'gray-dust'
+        hex: '#9D9D9C'
+  - name: 'gray-dove'
+    context:
+      color:
+        name: 'gray-dove'
+        hex: '#6D6D6D'
+  - name: 'gray-emperor'
+    context:
+      color:
+        name: 'gray-emperor'
+        hex: '#555555'
+  - name: 'black-mine'
+    context:
+      color:
+        name: 'black-mine'
+        hex: '#221F1F'
+  - name: 'black'
+    context:
+      color:
+        name: 'black'
+        hex: '#000000'
+  - name: 'blue-twitter'
+    context:
+      color:
+        name: 'blue-twitter'
+        hex: '#55ACEE'
+  - name: 'blue-linkedin'
+    context:
+      color:
+        name: 'blue-linkedin'
+        hex: '#5291DD'
+  - name: 'blue-facebook'
+    context:
+      color:
+        name: 'blue-facebook'
+        hex: '#3B5998'

@@ -1,0 +1,15 @@
+title: 'Radio Buttons'
+label: 'Radio Buttons'
+order: 5
+preview: '@preview'
+status: 'wip'
+collated: true
+context:
+  radio:
+    type: 'radio'
+    modifier: ''
+variants:
+  - name: 'Checkbox'
+    context:
+      radio:
+        type: 'checkbox'

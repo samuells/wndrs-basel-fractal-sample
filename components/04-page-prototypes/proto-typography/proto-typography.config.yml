@@ -1,0 +1,11 @@
+title: Typograhy
+label: Typograhy
+order: 1
+status: 'wip'
+collated: false
+preview: '@preview'
+variants:
+  - name: 'in Pink Theme'
+    preview: '@preview-themed'
+    context:
+      theme: pink

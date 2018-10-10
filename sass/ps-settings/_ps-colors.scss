@@ -1,0 +1,136 @@
+// =======================
+// Colors Variables
+//
+// Naming convention - base color + the name of the color base
+// on the project http://chir.ag/projects/name-that-color/
+// =======================
+
+// Project Palette
+$transparent: rgba(255, 255, 255, 0);
+$white: #fff;
+$gray-sand: #f5f5f5;
+$gray-mercury: #e6e6e6;
+$gray-alto: #d5d5d5;
+$gray-silver: #c6c6c6;
+$gray-dust: #9d9d9c;
+$gray-dove: #6d6d6d;
+$gray-emperor: #555;
+$black-mine: #221f1f;
+$black: #000;
+$blue-twitter: #55acee;
+$blue-facebook: #3b5998;
+$blue-linkedin: #5291dd;
+
+// =======================
+// Colors Constants
+//
+// In this section are defined color constants for various elements of web.
+// **To define color use only variables from above section**
+// =======================
+
+// Base Colors
+$primary-font-color: $black-mine !default;
+$body-bgc: $white !default;
+
+// Headline Colors
+$headline-c: $primary-font-color;
+
+// Buttons Colors
+$button-fc: $black-mine !default;
+$button-bc: $gray-emperor !default;
+$button-bgc: $transparent !default;
+$button-fc--hover: $white !default;
+$button-bgc--hover: $gray-emperor !default;
+$button-bc--active: $black-mine !default;
+$button-blue-fc: $blue-twitter !default;
+$button-blue-bc: $blue-twitter !default;
+$button-blue-fc--hover: $white !default;
+$button-blue-bgc--hover: $blue-twitter !default;
+$button-blue-bc--active: $blue-facebook !default;
+
+// Anchor Links Colors
+$link-fc: $blue-facebook !default;
+$link-fc--hover: $blue-twitter !default;
+$link-fc--active: $blue-linkedin !default;
+$link-underline: $link-fc !default;
+$link-paragraph-fc: $link-fc !default;
+$link-paragraph-fc--hover: $link-fc--hover !default;
+$link-paragraph-fc--active: $white !default;
+$link-paragraph-underline: $link-fc--hover !default;
+
+// Top Navigation Colors
+$topbar-bgc: $gray-sand !default;
+$submenu-bgc: $gray-sand !default;
+$submenu-sc: $gray-dust !default;
+$langswitcher-fs--active: $white !default;
+$langswitcher-bs--active: $gray-emperor !default;
+$burger-ic: $gray-dove !default;
+$burger-ic--hover: $black !default;
+
+// Teaser Colors
+$news-teaser-fc: $primary-font-color !default;
+$news-teaser-bc: $gray-mercury !default;
+$news-teaser-bgc: $transparent !default;
+$news-teaser-bgc--hover: $gray-mercury !default;
+$news-teaser-bgc--active: $gray-dust !default;
+
+// Table Colors
+$table-fc: $primary-font-color !default;
+$table-bgc: $gray-sand !default;
+$table-bc: $gray-emperor !default;
+$table-bgc: $gray-sand !default;
+$table-header-fc: $table-bgc !default;
+$table-header-bgc: $table-fc !default;
+
+//Input Colors
+$input-fc: $primary-font-color !default;
+$input-bc: $primary-font-color !default;
+$input-bc--active: $blue-twitter !default;
+$input-bgc: $white !default;
+$input-placeholder-fc: $gray-emperor !default;
+
+//Select Boxes Colors
+$select-boxes-fc: $primary-font-color !default;
+$select-boxes-bc: $gray-emperor !default;
+$select-boxes-bc--active: $blue-twitter !default;
+$select-boxes-bgc: $white !default;
+$select-boxes-option-fc: $primary-font-color !default;
+$select-boxes-option-bgc: $white !default;
+$select-boxes-option-fc--hover: $white !default;
+$select-boxes-option-bgc--hover: $blue-twitter !default;
+
+//Textarea Color
+$textarea-fc: $primary-font-color !default;
+$textarea-bc: $gray-emperor !default;
+$textarea-bc--active: $blue-twitter !default;
+$textarea-bgc: $white !default;
+$textarea-placeholder-fc: $gray-emperor !default;
+
+//Radio button
+$radio-bc: $gray-emperor !default;
+$radio-dot-bgc: $white !default;
+$radio-bc--checked: $blue-twitter !default;
+$radio-bgc--checked: $blue-twitter !default;
+
+//Checkbox button
+$checkbox-bc: $radio-bc !default;
+$checkbox-dot-bgc: $radio-dot-bgc !default;
+$checkbox-bc--checked: $radio-bc--checked !default;
+$checkbox-bgc--checked: $radio-bgc--checked !default;
+$checkbox-fc--checked: $white !default;
+
+// Hero area
+$hero-area-bgc--news: $body-bgc;
+
+//Cookie Compliance
+$cookie-compliance-fc: $black-mine;
+$cookie-compliance-bc: $gray-emperor;
+
+//Footer
+$footer-fc: $primary-font-color !default;
+$footer-bgc: $gray-alto !default;
+$footer-bc: $gray-alto !default;
+
+// Walls
+$wall-news-bgc: $gray-sand !default;
+$wall-news-item-bgc: $white !default;

@@ -1,0 +1,15 @@
+title: 'Image'
+label: 'Image'
+status: 'wip'
+order: 6
+preview: '@preview'
+collated: false
+context:
+  image:
+    url: 'https://placehold.it/350x150'
+    alt: 'alt'
+variants:
+  - name: 'Full Width'
+    context:
+      image:
+        modifier: 'full-width'

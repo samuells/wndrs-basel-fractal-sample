@@ -1,0 +1,61 @@
+@mixin button--base {
+  @include paragraph(false);
+  display: inline-block;
+  padding: calc-rem(8 18);
+  border: calc-rem(2) solid $button-bc;
+  border-radius: 0;
+  margin-bottom: calc-rem(16);
+  color: $button-fc;
+  background-color: $button-bgc;
+  text-rendering: optimizeLegibility;
+  appearance: none;
+  cursor: pointer;
+  box-shadow: none;
+  @include transition(background-color, color, border-color);
+
+  &:active,
+  &:focus,
+  &:hover {
+    background-color: $button-bgc--hover;
+    color: $button-fc--hover;
+  }
+
+  &:active {
+    border-color: $button-bc--active;
+  }
+  @include breakpoint(large) {
+    padding: calc-rem(12 20);
+    margin-bottom: calc-rem(24);
+    font-size: calc-rem(18);
+  }
+}
+// -----------
+// Blue Button Mixin
+@mixin button--blue {
+  border-color: $button-blue-bc;
+  color: $button-blue-fc;
+
+  &:active,
+  &:focus,
+  &:hover {
+    background-color: $button-blue-bgc--hover;
+    color: $button-blue-fc--hover;
+  }
+
+  &:active {
+    border-color: $button-blue-bc--active;
+  }
+}
+// ---------
+// Implementation
+@if $generate-styleguide-classes {
+  .button,
+  button {
+    @include button--base;
+  }
+
+  .button--blue {
+    @include button--base;
+    @include button--blue;
+  }
+}

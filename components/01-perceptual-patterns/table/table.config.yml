@@ -1,0 +1,14 @@
+title: 'Table'
+label: 'Table'
+order: 10
+status: 'wip'
+preview: '@preview'
+collated: false
+context:
+  table:
+    modifier: ''
+variants:
+  - name: 'Full Width Table'
+    context:
+      table:
+        modifier: 'full-width'

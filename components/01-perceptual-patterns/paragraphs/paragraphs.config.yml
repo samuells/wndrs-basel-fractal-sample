@@ -1,0 +1,22 @@
+title: 'Paragraph'
+order: 1
+status: 'wip'
+preview: '@preview-themed'
+collated: false
+context:
+  paragraph:
+    modifier: ''
+variants:
+  - name: 'Small Paragraph'
+    context:
+      paragraph:
+        modifier: 'small'
+  - name: 'Intro Paragraph'
+    context:
+      paragraph:
+        modifier: 'intro'
+  - name: 'Pink Themed'
+    context:
+      theme: pink
+      paragraph:
+        modifier: ''

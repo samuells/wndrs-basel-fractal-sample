@@ -1,0 +1,21 @@
+@mixin nav--breadcrumb {
+  @include row--outer;
+  padding: rh(0.5) 0;
+
+  ol {
+    @include reset-ul(true);
+  }
+
+  li:not(:last-child)::after {
+    content: ">";
+    margin: 0 rem(5);
+  }
+
+  a {
+    @include link--stand-alone;
+  }
+}
+
+.nav--breadcrumb {
+  @include nav--breadcrumb;
+}

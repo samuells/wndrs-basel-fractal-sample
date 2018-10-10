@@ -1,0 +1,24 @@
+title: News Teaser
+label: News Teaser
+order: 1
+status: 'wip'
+preview: '@preview'
+collated: false
+context:
+  teaser:
+    view: 'simple'
+    modifier: 'teaser--news'
+    headline: 'Introducing The Website Speed Test Image Analysis Tool'
+    author: 'Eric Portis'
+    cta:
+      url: '#'
+variants:
+  - name: Full News Teaser
+    context:
+      teaser:
+        view: 'full'
+        modifier: 'teaser--news--full'
+        date: 'July 13th, 2017'
+        teaserText: 'Web developers spend their days writing hypertext, but, byte for byte, most of the web is composed of images.'
+        cta:
+          label: 'Read more'

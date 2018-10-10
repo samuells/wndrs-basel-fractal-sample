@@ -1,0 +1,24 @@
+// Breakpoints & Media Queries
+//
+// Ingrid used the new 'breakpoint' mixin of Foundation to generate media queries.
+// There also exist special breakpoint 'maxed-breakpoint', aftet wich one has the site fixed width and
+// only the margin left and right grow.
+// **In this section should be found all the media queries used by the project.**
+//
+// Used media queries:
+// * $default-range: [0px, 360px]
+// * $small-range: [361px, 540px]
+// * $medium-range: [541px, 740px]
+// * $large-range: [741px, 1024px]
+// * $xlarge-range: [1025px, 1440px]
+// * $xxlarge-range: [1441px, ...]
+//
+// __Use in code:__
+// * <code>@include breakpoint(medium){ STYLES }</code>
+// * <code>@include breakpoint(medium only){ STYLES }</code>
+// * <code>@include breakpoint(default only){ STYLES }</code>
+// * <code>@include breakpoint(small down){ STYLES }</code>
+
+$breakpoints: ( default: 0, small: 360px, medium: 540px, large: 740px, xlarge: 1024px, xxlarge: 1400px, maxed: 1600px);
+$maxed-breakpoint: map-get($breakpoints, maxed);
+$maxed-row-width: 1400px; // max width of the content

@@ -1,0 +1,21 @@
+@mixin label {
+  @include headline--lvl5;
+}
+
+@mixin label--inline {
+  @include label;
+  display: inline;
+}
+
+// ---------
+// Implementation
+@if $generate-styleguide-classes {
+  label {
+    @include label;
+  }
+
+  input[type="radio"] + label,
+  input[type="checkbox"] + label {
+    @include label--inline;
+  }
+}

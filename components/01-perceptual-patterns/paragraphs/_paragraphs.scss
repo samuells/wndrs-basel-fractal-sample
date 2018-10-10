@@ -1,0 +1,47 @@
+@mixin paragraph($box-model: true) {
+  font-family: $body-font-family;
+  font-weight: 300;
+  @include fluid(( font-size: (16, 20)), (medium, xlarge));
+  line-height: 1.2;
+  color: $primary-font-color;
+  @if $box-model {
+    padding-bottom: rh(0.25);
+    margin-bottom: rh(0.25);
+    @include breakpoint(medium) {
+      padding-bottom: rh(0.5);
+      margin-bottom: rh(0.5);
+    }
+    @include breakpoint(xlarge) {
+      margin-bottom: rh(0.75);
+    }
+  }
+}
+
+@mixin paragraph--small($box-model: true) {
+  @include paragraph($box-model);
+  @include fluid(( font-size: (14, 16)), (medium, xlarge));
+}
+
+@mixin paragraph--intro($box-model: true) {
+  @include paragraph($box-model);
+  @include fluid(( font-size: (18, 24)), (medium, xlarge));
+  font-weight: 400;
+}
+
+// ---------
+// Implementation
+@if $generate-styleguide-classes {
+  .rt-content {
+    p {
+      @include paragraph;
+
+      &.small {
+        @include paragraph--small;
+      }
+
+      &.intro {
+        @include paragraph--intro;
+      }
+    }
+  }
+}

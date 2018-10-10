@@ -1,0 +1,11 @@
+@mixin messages {
+  @include column();
+}
+
+// ---------
+// Implementation
+@if $generate-styleguide-classes {
+  .messages {
+    @include messages;
+  }
+}

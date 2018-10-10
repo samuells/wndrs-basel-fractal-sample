@@ -1,0 +1,9 @@
+{
+   "name"   : "_topnav.mmenu",
+   "umd"	: true,
+   "files"	: {
+      "core"      : [ "oncanvas", "offcanvas", "scrollbugfix", "screenreader" ],
+      "addons"    : [ "navbars", "searchfield" ],
+      "extensions": [ "themes" ]
+   }
+}

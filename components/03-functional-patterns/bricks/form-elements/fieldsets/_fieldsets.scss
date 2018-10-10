@@ -1,0 +1,16 @@
+@mixin fieldset {
+  padding: rh(1);
+  margin: 0 0 rh(1);
+
+  legend {
+    @include headline--lvl4(false);
+  }
+}
+
+// ---------
+// Implementation
+@if $generate-styleguide-classes {
+  fieldset {
+    @include fieldset;
+  }
+}

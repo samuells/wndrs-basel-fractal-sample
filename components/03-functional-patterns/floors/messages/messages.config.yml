@@ -1,0 +1,10 @@
+title: 'System Messages'
+label: 'System Messages'
+order: 50
+status: 'wip'
+preview: '@preview'
+collated: true
+context:
+  messages:
+    modifer: 'status'
+    content: '<p>With Drupal 8, a CMS was implemented that is powerful, flexible and easy to handle. This was crucial as a long-term solution considering the a few thousand frontend users that would participate and communicate on this platform.</p>'

@@ -1,0 +1,8 @@
+title: 'Ordered Lists'
+label: 'Ordered Lists'
+order: 4
+status: 'wip'
+preview: '@preview'
+context:
+  list:
+    modifier: ''

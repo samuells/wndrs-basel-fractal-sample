@@ -1,0 +1,61 @@
+@mixin teaser--news {
+  border: rem(1) solid $news-teaser-bc;
+  box-shadow: rem(0 0 10 2) $news-teaser-bc;
+
+  h2 {
+    @include headline--lvl4;
+    color: $news-teaser-fc;
+  }
+
+  .teaser-author {
+    padding-bottom: 0;
+    margin-bottom: 0;
+    @include fluid((font-size: (12, 16)), (small, xlarge));
+    font-weight: 300;
+  }
+
+  a {
+    display: block;
+    padding: rh(0.25) rem(12);
+    background-color: $news-teaser-bgc;
+    @include transition(background-color);
+    @include link-states {
+      background-color: $news-teaser-bgc--hover;
+    }
+
+    &:active {
+      background-color: $news-teaser-bgc--active;
+    }
+  }
+}
+// Full Teaser View
+@mixin teaser--news--full {
+  padding: rh(0.5) rem(15);
+  border: rem(1) solid $news-teaser-bc;
+  box-shadow: rem(0 0 10 2) $news-teaser-bc;
+
+  h2 {
+    @include headline--lvl3;
+    color: $news-teaser-fc;
+  }
+
+  .teaser-date {
+    display: block;
+    @include paragraph--small(false);
+  }
+
+  .teaser-author {
+    @include paragraph--small;
+  }
+}
+// ---------
+// Implementation
+@if $generate-styleguide-classes {
+  .teaser--news {
+    @include teaser--news;
+  }
+
+  .teaser--news--full {
+    @include teaser--news--full;
+  }
+}

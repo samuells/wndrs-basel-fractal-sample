@@ -1,0 +1,58 @@
+@mixin table {
+  display: table;
+  max-width: 100%;
+  text-align: left;
+  margin-bottom: rh();
+  border-collapse: collapse;
+  border: calc-rem(1) solid $table-bc;
+
+  td,
+  th {
+    @include paragraph(false);
+    padding: rh(0.5) rh(1);
+    vertical-align: top;
+    border-top: calc-rem(1) solid $table-bc;
+  }
+
+  th {
+    font-weight: 700;
+  }
+
+  thead {
+    background-color: $table-header-bgc;
+    color: $table-bgc;
+  }
+
+  thead th,
+  thead td {
+    color: inherit;
+    vertical-align: bottom;
+    border-top: 0;
+    border-bottom: calc-rem(2) solid $table-bc;
+  }
+
+  tbody + tbody {
+    border-top: calc-rem(2) solid $table-bc;
+  }
+
+  tbody tr:nth-of-type(odd) {
+    background-color: darken($table-bgc, 1%);
+  }
+}
+
+@mixin table--full-width {
+  @include table;
+  width: 100%;
+}
+
+// ---------
+// Implementation
+@if $generate-styleguide-classes {
+  table {
+    @include table;
+
+    &.full-width {
+      @include table--full-width;
+    }
+  }
+}

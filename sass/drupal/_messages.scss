@@ -1,0 +1,10 @@
+.messages {
+  padding: 0.5rem;
+  z-index: ($menu-z-index - 1);
+  position: fixed;
+  top: rhythm();
+  right: rhythm();
+  background-color: $wolverine;
+  color: $black;
+  max-width: 50%;
+}

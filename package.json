@@ -1,5 +1,24 @@
 {
+  "name": "wndrs-fractal-sample",
+  "version": "1.0.0",
+  "license": "MIT",
+  "author": "WONDROUS LLC <samuel@wondrous.ch> (https://www.wearewondrous.ch), Samuel Snopko <samuel@wondrous.ch>",
   "devDependencies": {
-    "@frctl/fractal": "^1.1.7"
+    "@frctl/fractal": "^1.1.7",
+    "@wondrousllc/fractal-config-helper": "^1.1.7",
+    "autoprefixer": "^9.1.5",
+    "cssnano": "^4.1.4",
+    "faker": "^4.1.0",
+    "foundation-sites": "6.4.4-rc1",
+    "gulp": "4.0",
+    "gulp-postcss": "^8.0.0",
+    "gulp-rename": "^1.4.0",
+    "gulp-sass": "^4.0.1",
+    "gulp-sourcemaps": "^2.6.4",
+    "node-sass": "^4.9.3",
+    "owl.carousel": "2.2.0",
+    "path": "^0.12.7",
+    "photoswipe": "dimsemenov/PhotoSwipe",
+    "@wondrousllc/fractal-twig-drupal-adapter": "^1.1.0"
   }
 }

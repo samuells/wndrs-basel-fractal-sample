@@ -1,0 +1,27 @@
+@mixin figure {
+  max-width: calc-rem(940);
+  margin: rh(0.5) auto;
+
+  img {
+    @include image--full;
+    margin-bottom: rh(0.25);
+  }
+
+  figcaption {
+    display: block;
+    @include paragraph--small;
+  }
+  @include breakpoint(medium) {
+    margin: rh(2) auto rh(1.5);
+  }
+  @include breakpoint(large) {
+    margin: rh(2.5) auto rh(2);
+  }
+}
+// ---------
+// Implementation
+@if $generate-styleguide-classes {
+  figure {
+    @include figure;
+  }
+}

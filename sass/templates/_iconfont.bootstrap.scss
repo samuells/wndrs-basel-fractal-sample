@@ -1,0 +1,34 @@
+$generate-styleguide-classes: true !default;
+
+@if $generate-styleguide-classes {
+  @font-face {
+    font-family: "<%= fontName %>";
+    src: url('<%= fontPath %><%= fontName %>.eot');
+    src: url('<%= fontPath %><%= fontName %>.eot?#iefix') format('eot'),
+    url('<%= fontPath %><%= fontName %>.woff') format('woff2'),
+    url('<%= fontPath %><%= fontName %>.woff') format('woff'),
+    url('<%= fontPath %><%= fontName %>.ttf') format('truetype'),
+    url('<%= fontPath %><%= fontName %>.svg#<%= fontName %>') format('svg');
+  }
+}
+
+@mixin icon--default {
+  display: inline-block;
+  font-family: "<%= fontName %>";
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  text-decoration: inherit;
+  text-rendering: optimizeLegibility;
+  text-transform: none;
+  vertical-align: middle;
+  speak: none;
+}
+
+<% _.each(glyphs, function(glyph) { %>@mixin <%= cssClass%>--<%= glyph.fileName %> {
+  @include icon--default;
+  content: "\<%= glyph.codePoint %>";
+}
+<% }); %>

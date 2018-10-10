@@ -1,0 +1,29 @@
+@mixin grid--1to3 {
+  @include reset-ul;
+  @include clearfix;
+
+  .column--1to3,
+  > li {
+    width: 100%;
+  }
+  @include breakpoint(large) {
+    @include clearfix;
+    .column--1to3,
+    > li {
+      float: left;
+      width: 50%;
+    }
+  }
+  @include breakpoint(xlarge) {
+    .column--1to3,
+    > li {
+      width: calc(100% / 3);
+    }
+  }
+}
+
+@if $generate-styleguide-classes {
+  .grid--1to3 {
+    @include grid--1to3;
+  }
+}

@@ -1,0 +1,22 @@
+@mixin menu--footer {
+  ul {
+    @include reset-ul(true);
+  }
+
+  li:not(:first-of-type)::before {
+    content: "|";
+    color: currentColor;
+  }
+
+  a {
+    @include link--in-paragraph;
+  }
+}
+
+// ---------
+// Implementation
+@if $generate-styleguide-classes {
+  .menu--footer {
+    @include menu--footer;
+  }
+}

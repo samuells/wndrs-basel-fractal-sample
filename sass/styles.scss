@@ -1,0 +1,92 @@
+// - - - - - - - - - - - - - - - - - - - - - - - - -
+// !!!! README FIRST !!!!
+// - - - - - - - - - - - - - - - - - - - - - - - - -
+//
+// AS FIRST CHANGE THE NAME OF THE IMPORT ON 41th LINE.
+// HINT: See the name of import file in sass/production/
+//
+// This sass file is used to generate final css
+// output file for web.
+//
+// -- IMPORTANT --
+// * do not change the order of the import, only on your own danger!
+//
+// - - - - - - - - - - - - - - - - - - - - - - - - -
+
+@charset "utf-8";
+
+// Global Variables
+// -------------------------------------
+// - $generate-styleguide-classes: define if we use the default classes in our custom style mixins or we would like to use special class names
+$generate-styleguide-classes: true !default;
+
+// Normalize CSS
+// -------------------------------------
+//@import "styleguide/normalize";
+
+// Styles Toolbelt
+// -------------------------------------
+// - import of function, mixins, settings used in project
+@import "ps-toolbelt";
+
+// Project Styles
+// ----------------
+@import "01-perceptual-patterns/paragraphs/paragraphs";
+@import "01-perceptual-patterns/headlines/headlines";
+@import "01-perceptual-patterns/unordered-list/unordered-list";
+@import "01-perceptual-patterns/ordered-list/ordered-list";
+@import "01-perceptual-patterns/links/links";
+@import "01-perceptual-patterns/image/image";
+@import "01-perceptual-patterns/blockquote/blockquote";
+@import "01-perceptual-patterns/figure/figure";
+@import "01-perceptual-patterns/buttons/buttons";
+@import "01-perceptual-patterns/table/table";
+
+@import "02-layout-patterns/rows/rows";
+@import "02-layout-patterns/columns/columns";
+@import "02-layout-patterns/grid-1to3/grid-1to3";
+
+@import "03-functional-patterns/bricks/teaser-news/teaser-news";
+@import "03-functional-patterns/bricks/form-elements/labels/labels";
+@import "03-functional-patterns/bricks/form-elements/inputs/inputs";
+@import "03-functional-patterns/bricks/form-elements/textarea/textarea";
+@import "03-functional-patterns/bricks/form-elements/radio-buttons/radio-buttons";
+@import "03-functional-patterns/bricks/form-elements/fieldsets/fieldsets";
+
+@import "03-functional-patterns/floors/floor-text/floor-text";
+@import "03-functional-patterns/floors/floor-image/floor-image";
+@import "03-functional-patterns/floors/floor-text-with-image/floor-text-with-image";
+@import "03-functional-patterns/floors/wall-news/wall-news";
+@import "03-functional-patterns/floors/hero-area/hero-area";
+@import "03-functional-patterns/floors/breadcrumb/breadcrumb";
+@import "03-functional-patterns/floors/messages/messages";
+@import "03-functional-patterns/floors/gallery/gallery";
+@import "03-functional-patterns/floors/slider/slider";
+@import "03-functional-patterns/floors/cookie-compliance/cookie-compliance";
+
+@import "03-functional-patterns/departments/stripe/stripe";
+
+@import "03-functional-patterns/menus/top-navigation/top-navigation";
+@import "03-functional-patterns/menus/footer-menu/footer-menu";
+@import "03-functional-patterns/menus/tabs/tabs";
+
+@import "03-functional-patterns/footer/footer";
+
+@import "05-global-helpers/helper-classes";
+
+
+// Pink Theme
+// ----------------
+.theme--pink {
+  @import "ps-settings/ps-colors--pink-theme";
+  @import "01-perceptual-patterns/paragraphs/paragraphs";
+  @import "01-perceptual-patterns/headlines/headlines";
+  @import "01-perceptual-patterns/unordered-list/unordered-list";
+  @import "01-perceptual-patterns/ordered-list/ordered-list";
+  @import "01-perceptual-patterns/links/links";
+  @import "01-perceptual-patterns/image/image";
+  @import "01-perceptual-patterns/blockquote/blockquote";
+  @import "01-perceptual-patterns/figure/figure";
+  @import "01-perceptual-patterns/buttons/buttons";
+  @import "01-perceptual-patterns/table/table";
+}
