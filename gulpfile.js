@@ -11,17 +11,14 @@ const postcss = require("gulp-postcss");
 const autoprefixer = require("autoprefixer");
 const cssnano = require("cssnano");
 const rename = require("gulp-rename");
+const include = require("gulp-include");
+const uglify = require("gulp-uglify");
 
 // --------------------------------------------------------
 // Configuration
 // --------------------------------------------------------
 
-const themeName = "wndrs";
-const webroot = "web";
-
 const paths = {
-  // webroot: `${__dirname}/${webroot}`,
-  // build: `${__dirname}/${webroot}/themes/custom/${themeName}/build`,
   theme: `${__dirname}`,
   docs: `${__dirname}/docs`,
   components: `${__dirname}/components`,
@@ -67,6 +64,27 @@ const sass_custom_sources = [
   `!${paths.theme}/sass/templates/**/*`
 ];
 
+const js_custom_sources = [
+  `${paths.theme}/**/*.js`,
+  `!${paths.theme}/js/**/*.js`,
+  `!${paths.theme}/public/**/*.js`,
+  `!${paths.theme}/static/**/*.js`,
+  `!${paths.theme}/js-src/vendor/*.js`
+];
+
+const js_config = {
+  includePaths: [
+    `${paths.components}/**/*`,
+    `${paths.theme}/js-src`,
+    `${paths.modules}`,
+    `${paths.modules}/jquery/**/*`,
+    `${paths.modules}/foundation-sites/dist/js`,
+    `${paths.modules}/jquery-once`,
+    `${paths.modules}/fastclick/**/*`,
+    `${paths.modules}/select2/dist/js`
+  ]
+};
+
 // --------------------------------------------------------
 // Styles
 // --------------------------------------------------------
@@ -80,6 +98,21 @@ function theme_styles() {
     .pipe(rename({ suffix: ".min" }))
     .pipe(sourcemaps.write("./"))
     .pipe(gulp.dest(`${paths.static}/css`));
+}
+
+// --------------------------------------------------------
+// Javascripts
+// --------------------------------------------------------
+
+function theme_scripts() {
+  return gulp
+    .src([`${paths.theme}/js-src/*.js`, `${paths.theme}/js-src/vendor/*.js`])
+    .pipe(sourcemaps.init())
+    .pipe(include(js_config).on("error", console.log))
+    .pipe(uglify().on("error", console.log))
+    .pipe(rename({ suffix: ".min" }))
+    .pipe(sourcemaps.write("./"))
+    .pipe(gulp.dest(`${paths.static}/js`));
 }
 
 // --------------------------------------------------------
@@ -133,7 +166,10 @@ function watch() {
 // Task sets
 // --------------------------------------------------------
 
-const compile = gulp.series(copy_frontend_assets, theme_styles);
+const compile = gulp.series(
+  copy_frontend_assets,
+  gulp.parallel(theme_scripts, theme_styles)
+);
 
 gulp.task("start", gulp.series(compile, serve));
 // gulp.task("static-styleguide", gulp.series(compile, build));

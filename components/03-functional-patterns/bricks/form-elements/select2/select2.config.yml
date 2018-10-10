@@ -1,0 +1,15 @@
+title: 'Select2'
+label: 'Select2'
+order: 3
+preview: '@preview'
+status: 'wip'
+collated: true
+context:
+  select:
+    modifier: 'js-select'
+variants:
+  - name: 'multiple'
+    context:
+      select:
+        modifier: 'js-select'
+        attribute: 'multiple'
