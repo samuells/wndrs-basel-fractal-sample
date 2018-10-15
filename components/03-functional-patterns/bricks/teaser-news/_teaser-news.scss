@@ -48,6 +48,26 @@
     @include paragraph--small;
   }
 }
+
+@mixin teaser--news--colorful {
+  background-color: $blue-twitter;
+
+  span, p, h2 {
+    color: $white;
+  }
+
+  .button {
+    color: $white;
+    border-color: currentColor;
+  }
+
+  @include breakpoint(large) {
+    .button {
+      color: firebrick !important;
+    }
+  }
+}
+
 // ---------
 // Implementation
 @if $generate-styleguide-classes {
@@ -57,5 +77,9 @@
 
   .teaser--news--full {
     @include teaser--news--full;
+
+    &.colorful {
+      @include teaser--news--colorful;
+    }
   }
 }

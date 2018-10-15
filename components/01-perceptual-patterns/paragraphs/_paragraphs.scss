@@ -31,7 +31,7 @@
 // ---------
 // Implementation
 @if $generate-styleguide-classes {
-  .rt-content {
+  // .rt-content {
     p {
       @include paragraph;
 
@@ -43,5 +43,5 @@
         @include paragraph--intro;
       }
     }
-  }
+  // }
 }

@@ -22,3 +22,12 @@ variants:
         teaserText: 'Web developers spend their days writing hypertext, but, byte for byte, most of the web is composed of images.'
         cta:
           label: 'Read more'
+  - name: ColorFull News Teaser
+    context:
+      teaser:
+        view: 'full'
+        modifier: 'teaser--news--full colorful'
+        date: 'July 13th, 2017'
+        teaserText: 'Web developers spend their days writing hypertext, but, byte for byte, most of the web is composed of images.'
+        cta:
+          label: 'Read more'
